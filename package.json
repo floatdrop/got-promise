@@ -1,0 +1,32 @@
+{
+  "name": "got-promise",
+  "version": "0.0.0",
+  "description": "Promise wrapper of sindresorhus/got",
+  "license": "MIT",
+  "repository": "floatdrop/got-promise",
+  "author": {
+    "name": "Vsevolod Strukchinsky",
+    "email": "floatdrop@gmail.com",
+    "url": "github.com/floatdrop"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "got", "promise", "bluebird"
+  ],
+  "dependencies": {
+    "got": "^2.6.0",
+    "native-or-bluebird": "^1.2.0"
+  },
+  "devDependencies": {
+    "bluebird": "^2.9.24",
+    "mocha": "*"
+  }
+}
