@@ -1,6 +1,6 @@
 {
   "name": "got-promise",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Promise wrapper of sindresorhus/got",
   "license": "MIT",
   "repository": "floatdrop/got-promise",
@@ -19,7 +19,9 @@
     "index.js"
   ],
   "keywords": [
-    "got", "promise", "bluebird"
+    "got",
+    "promise",
+    "bluebird"
   ],
   "dependencies": {
     "got": "^2.6.0",
