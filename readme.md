@@ -21,8 +21,7 @@ $ npm install --save got-promise
 ```js
 var got = require('got-promise');
 
-// Promises
-
+// Promise
 got.promise('google.com')
 	.then(function (res) {
 		console.log(res.body);
@@ -32,13 +31,11 @@ got.promise('google.com')
 	});
 
 // Callback
-
 got('google.com', function (err, data) {
 	console.log(data);
 });
 
-// Streams
-
+// Stream
 got('google.com').pipe(process.stdout);
 ```
 
