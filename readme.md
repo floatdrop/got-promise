@@ -45,7 +45,7 @@ got('google.com').pipe(process.stdout);
 Same as in [sindresorhus/got](https://github.com/sindresorhus/got), but with `promise` property,
 that contains same methods, as `got`, but promisified.
 
-Promisified methods provide [http.incomingMessage](https://nodejs.org/api/http.html#http_http_incomingmessage) object on fulfill with `body` property with content.
+Promisified methods provide [http.incomingMessage](https://nodejs.org/api/http.html#http_http_incomingmessage) object on fulfil with `body` property with content.
 
 ## License
 
