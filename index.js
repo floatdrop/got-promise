@@ -22,7 +22,7 @@ var promise = function (url, opts, cb) {
 	'head',
 	'delete'
 ].forEach(function (el) {
-	promise[el] = function (url, opts, cb) {
+	got[el].promise = function (url, opts, cb) {
 		opts = opts || {};
 		opts.method = el.toUpperCase();
 		return promise(url, opts, cb);

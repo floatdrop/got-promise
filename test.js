@@ -7,12 +7,12 @@ var got = require('./');
 
 it('should have promisified methods', function () {
 	assert.ok(typeof got.promise === 'function');
-	assert.ok(typeof got.promise.get === 'function');
-	assert.ok(typeof got.promise.post === 'function');
-	assert.ok(typeof got.promise.put === 'function');
-	assert.ok(typeof got.promise.patch === 'function');
-	assert.ok(typeof got.promise.head === 'function');
-	assert.ok(typeof got.promise.delete === 'function');
+	assert.ok(typeof got.get.promise === 'function');
+	assert.ok(typeof got.post.promise === 'function');
+	assert.ok(typeof got.put.promise === 'function');
+	assert.ok(typeof got.patch.promise === 'function');
+	assert.ok(typeof got.head.promise === 'function');
+	assert.ok(typeof got.delete.promise === 'function');
 });
 
 it('promisified methods should work', function (done) {
