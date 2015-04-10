@@ -6,7 +6,10 @@ var got = require('got');
 var promise = function (url, opts, cb) {
 	return new Promise(function (resolve, reject) {
 		got(url, opts, function (err, body, res) {
-			if (err) { return reject(err); }
+			if (err) {
+				err.response = res;
+				return reject(err);
+			}
 
 			res.body = body;
 			resolve(res);

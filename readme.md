@@ -27,7 +27,7 @@ got.promise('google.com')
 		console.log(res.body);
 	})
 	.catch(function (err) {
-		console.error(err);
+		console.error(err.response ? err.response.headers : err);
 	});
 
 // Callback
