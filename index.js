@@ -26,9 +26,7 @@ var promise = function (url, opts, cb) {
 	'delete'
 ].forEach(function (el) {
 	got[el].promise = function (url, opts, cb) {
-		opts = opts || {};
-		opts.method = el.toUpperCase();
-		return promise(url, opts, cb);
+		return promise(url, objectAssign({}, opts, {method: el.toUpperCase()}), cb);
 	};
 });
 
