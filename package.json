@@ -1,6 +1,6 @@
 {
   "name": "got-promise",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Promise wrapper of sindresorhus/got",
   "license": "MIT",
   "repository": "floatdrop/got-promise",
