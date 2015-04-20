@@ -4,7 +4,7 @@ var Promise = require('native-or-bluebird');
 var objectAssign = require('object-assign');
 var got = require('got');
 
-var promise = function (url, opts, cb) {
+function gotPromise(url, opts) {
 	return new Promise(function (resolve, reject) {
 		got(url, opts, function (err, body, res) {
 			if (err) {
@@ -16,7 +16,9 @@ var promise = function (url, opts, cb) {
 			resolve(res);
 		});
 	});
-};
+}
+
+module.exports = gotPromise;
 
 [
 	'get',
@@ -26,11 +28,7 @@ var promise = function (url, opts, cb) {
 	'head',
 	'delete'
 ].forEach(function (el) {
-	got[el].promise = function (url, opts, cb) {
-		return promise(url, objectAssign({}, opts, {method: el.toUpperCase()}), cb);
+	module.exports[el] = function (url, opts) {
+		return gotPromise(url, objectAssign({}, opts, {method: el.toUpperCase()}));
 	};
 });
-
-got.promise = promise;
-
-module.exports = got;
