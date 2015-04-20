@@ -21,8 +21,7 @@ $ npm install --save got-promise
 ```js
 var got = require('got-promise');
 
-// Promise
-got.promise('google.com')
+got('google.com')
 	.then(function (res) {
 		console.log(res.body);
 	})
@@ -30,19 +29,20 @@ got.promise('google.com')
 		console.error(err.response ? err.response.headers : err);
 	});
 
-// Callback
-got('google.com', function (err, data) {
-	console.log(data);
-});
+got.post('google.com', {body: 'hello'})
+	.then(function (res) {
+		console.log(res.body);
+	})
+	.catch(function (err) {
+		console.error(err.response ? err.response.headers : err);
+	});
 
-// Stream
-got('google.com').pipe(process.stdout);
 ```
 
 
 ## API
 
-Same as in [sindresorhus/got](https://github.com/sindresorhus/got), but with `promise` property with promisified function on each `got` method.
+Same as in [sindresorhus/got](https://github.com/sindresorhus/got), but with promisified methods.
 
 Promisified methods provide [http.incomingMessage](https://nodejs.org/api/http.html#http_http_incomingmessage) object on fulfil with `body` property with content.
 
