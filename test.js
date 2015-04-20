@@ -15,8 +15,15 @@ it('should have promisified methods', function () {
 	assert.ok(typeof got.delete.promise === 'function');
 });
 
-it('promisified methods should work', function (done) {
+it('got should work', function (done) {
 	got.promise('google.com').then(function (res) {
+		assert.ok(res.body);
+		done();
+	}, done);
+});
+
+it('got.get should work', function (done) {
+	got.get.promise('google.com').then(function (res) {
 		assert.ok(res.body);
 		done();
 	}, done);
