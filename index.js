@@ -1,6 +1,7 @@
 'use strict';
 
 var Promise = require('native-or-bluebird');
+var objectAssign = require('object-assign');
 var got = require('got');
 
 var promise = function (url, opts, cb) {
