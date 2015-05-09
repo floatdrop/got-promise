@@ -8,6 +8,7 @@ function gotPromise(url, opts) {
 	return new Promise(function (resolve, reject) {
 		got(url, opts, function (err, body, res) {
 			if (err) {
+				err.body = body;
 				err.response = res;
 				return reject(err);
 			}

@@ -27,6 +27,7 @@ got('google.com')
 	})
 	.catch(function (err) {
 		console.error(err.response ? err.response.headers : err);
+		console.log(err.body);
 	});
 
 got.post('google.com', {body: 'hello'})
@@ -35,6 +36,7 @@ got.post('google.com', {body: 'hello'})
 	})
 	.catch(function (err) {
 		console.error(err.response ? err.response.headers : err);
+		console.log(err.body);
 	});
 
 ```
