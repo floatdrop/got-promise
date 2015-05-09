@@ -26,19 +26,12 @@ got('google.com')
 		console.log(res.body);
 	})
 	.catch(function (err) {
-		console.error(err.response ? err.response.headers : err);
+		console.error(err);
+		console.log(err.response);
 		console.log(err.body);
 	});
 
-got.post('google.com', {body: 'hello'})
-	.then(function (res) {
-		console.log(res.body);
-	})
-	.catch(function (err) {
-		console.error(err.response ? err.response.headers : err);
-		console.log(err.body);
-	});
-
+got.post('google.com'); // => Promise
 ```
 
 
