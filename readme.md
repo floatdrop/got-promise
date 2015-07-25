@@ -1,16 +1,8 @@
 # got-promise [![Build Status](https://travis-ci.org/floatdrop/got-promise.svg?branch=master)](https://travis-ci.org/floatdrop/got-promise)
 
-Promise wrapper around [sindresorhus/got](https://github.com/sindresorhus/got). Uses native `Promise` or [petkaantonov/bluebird](https://github.com/petkaantonov/bluebird) (if available).
+__Deprecated__: Use `got` directly, since it now have Promise API :tada:.
 
 ## Install
-
-On NodeJS 0.10.x:
-
-```
-$ npm install --save got-promise bluebird
-```
-
-On NodeJS 0.12.x and later:
 
 ```
 $ npm install --save got-promise
@@ -27,8 +19,7 @@ got('google.com')
 	})
 	.catch(function (err) {
 		console.error(err);
-		console.log(err.response);
-		console.log(err.body);
+		console.log(err.response.body);
 	});
 
 got.post('google.com'); // => Promise
@@ -37,9 +28,7 @@ got.post('google.com'); // => Promise
 
 ## API
 
-Same as in [sindresorhus/got](https://github.com/sindresorhus/got), but with promisified methods.
-
-Promisified methods provide [http.incomingMessage](https://nodejs.org/api/http.html#http_http_incomingmessage) object on fulfil with `body` property with content.
+Look at [sindresorhus/got](https://github.com/sindresorhus/got).
 
 ## License
 

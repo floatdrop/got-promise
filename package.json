@@ -24,12 +24,9 @@
     "bluebird"
   ],
   "dependencies": {
-    "got": "^3.0.0",
-    "native-or-bluebird": "^1.2.0",
-    "object-assign": "^2.0.0"
+    "got": "^4.0.0"
   },
   "devDependencies": {
-    "bluebird": "^2.9.24",
     "mocha": "*"
   }
 }
